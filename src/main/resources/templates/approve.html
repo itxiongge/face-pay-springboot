@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script th:src="@{|/js/flexible.js|}"></script>
+    <link rel="stylesheet" type="text/css" th:href="@{|/css/common.css|}" />
+    <link rel="stylesheet" type="text/css" th:href="@{|/css/order.response.css|}" />
+    <style th:inline="text">
+      .block_1 {
+        width: 26.67vw;
+        height: 26.67vw;
+        border-radius: 50%;
+        background: url(..[[${user.pic}]]);
+        z-index: 45;
+        100% no-repeat;
+        background-size: 100% 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page flex-col">
+      <div class="section_4 flex-col">
+        <div class="text-group_3 flex-col justify-between">
+          <span class="text_1">支付账户</span>
+          <span class="text_2" th:text="${user.nickname}"></span>
+        </div>
+      <!--
+          判断来源：
+          购物则跳转创建订单
+          查看课程则跳转我的课程
+          -->
+        <div th:if="${from}=='myCourse'">
+          <a th:href="@{|/course/toMyCourse|}">
+            <!-- 进入我的课程列表-->
+            <button class="button_1 flex-col">
+              <span class="text_3">同意并确定</span>
+            </button>
+          </a>
+        </div>
+        <div th:if="${from}=='sku'">
+          <!-- 创建订单 -->
+          <a th:href="@{|/order/createOrder?cid=${cid}&uid=${user.uid}|}">
+            <button class="button_1 flex-col">
+              <span class="text_3">同意并确定</span>
+            </button>
+          </a>
+        </div>
+
+        <a th:href="@{|/course/toSku|}">
+          <span class="text_4">取消</span>
+        </a>
+        <span class="text_5">
+          Copyright&nbsp;©&nbsp;2022,&nbsp;小英雄，京&nbsp;ICP&nbsp;备&nbsp;16027448号-3
+        </span>
+      </div>
+      <div class="section_5 flex-col">
+
+        <div class="group_10 flex-row justify-between">
+          <div class="group_3 flex-col"></div>
+            <span class="text_8">请确认授权</span>
+        </div>
+        <div class="section_2 flex-col" >
+          <div class="block_1 flex-col"></div>
+        </div>
+        <div class="section_3 flex-col"></div>
+        <div class="single-avatar_1 flex-col"></div>
+      </div>
+    </div>
+  </body>
+</html>

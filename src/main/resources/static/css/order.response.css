@@ -1,0 +1,221 @@
+.page {
+  background-color: rgba(246, 247, 251, 1);
+  position: relative;
+  width: 100vw;
+  height: 216.4vw;
+  overflow: hidden;
+}
+
+.section_4 {
+  width: 100vw;
+  height: 160.8vw;
+  margin-top: 55.74vw;
+}
+
+.text-group_3 {
+  width: 42.14vw;
+  height: 18.27vw;
+  margin: 16.8vw 0 0 28.93vw;
+}
+
+.text_1 {
+  width: 18.14vw;
+  height: 6.4vw;
+  color: rgba(64, 64, 64, 1);
+  font-size: 4.53vw;
+  font-family: PingFangSC-Medium;
+  text-align: left;
+  white-space: nowrap;
+  line-height: 6.4vw;
+  margin-left: 12vw;
+}
+
+.text_2 {
+  width: 42.14vw;
+  height: 9.74vw;
+  color: rgba(64, 64, 64, 1);
+  font-size: 6.93vw;
+  font-family: PingFangSC-Medium;
+  text-align: center;
+  white-space: nowrap;
+  line-height: 9.74vw;
+  margin-top: 2.14vw;
+}
+
+.button_1 {
+  background-image: linear-gradient(
+    270deg,
+    rgba(255, 165, 75, 1) 0,
+    rgba(250, 137, 25, 1) 100%
+  );
+  border-radius: 44px;
+  height: 11.74vw;
+  width: 86.67vw;
+  margin: 8vw 0 0 6.66vw;
+}
+
+.text_3 {
+  width: 22.67vw;
+  height: 6.4vw;
+  color: rgba(255, 255, 255, 1);
+  font-size: 4.53vw;
+  font-family: PingFangSC-Medium;
+  text-align: left;
+  white-space: nowrap;
+  line-height: 6.4vw;
+  margin: 2.66vw 0 0 32vw;
+}
+
+.text_4 {
+  width: 9.07vw;
+  height: 6.4vw;
+  color: rgba(136, 136, 136, 1);
+  font-size: 4.53vw;
+  font-family: PingFangSC-Medium;
+  text-align: left;
+  white-space: nowrap;
+  line-height: 6.4vw;
+  margin: 3.2vw 0 0 45.46vw;
+}
+
+.text_5 {
+  width: 78vw;
+  height: 4.4vw;
+  color: rgba(136, 136, 136, 1);
+  font-size: 3.2vw;
+  font-family: PingFangSC-Regular;
+  text-align: left;
+  white-space: nowrap;
+  line-height: 4.4vw;
+  margin: 87.86vw 0 4.13vw 11.06vw;
+}
+
+.section_5 {
+  z-index: 3;
+  height: 55.74vw;
+  background: url(../img/906c7136272737b3fb640ddee0a14bd1fbd0e680116e29f1947066d7a3cb115d.png)
+    100% no-repeat;
+  background-size: 100% 100%;
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.group_9 {
+  width: 96.94vw;
+  height: 3.6vw;
+  margin: 0.8vw 0 0 1.86vw;
+}
+
+.box_7 {
+  width: 8.4vw;
+  height: 2.54vw;
+  background: url(../img/89d3896e24a422396cab8b4a1606ebb7963839b2e6af571c1c2eaf2b474deba4.png)
+    100% no-repeat;
+  background-size: 100% 100%;
+  margin-top: 0.54vw;
+}
+
+.text_11 {
+  width: 12.14vw;
+  height: 3.2vw;
+  color: rgba(3, 3, 3, 1);
+  font-size: 3.2vw;
+  font-family: PingFangSC-Medium;
+  text-align: center;
+  white-space: nowrap;
+  line-height: 3.2vw;
+  margin: 0.26vw 0 0 34vw;
+}
+
+.box_8 {
+  width: 2vw;
+  height: 3.6vw;
+  background: url(../img/9a791aac6fe16b2602e8c25a6ee87c5342537697f679173888dc9f2a07aa7c23.png)
+    100% no-repeat;
+  background-size: 100% 100%;
+  margin-left: 24.14vw;
+}
+
+.text_12 {
+  width: 8.8vw;
+  height: 3.2vw;
+  color: rgba(3, 3, 3, 1);
+  font-size: 3.2vw;
+  font-family: PingFangSC-Medium;
+  text-align: right;
+  white-space: nowrap;
+  line-height: 3.2vw;
+  margin: 0.26vw 0 0 0.13vw;
+}
+
+.box_9 {
+  width: 6.54vw;
+  height: 2.8vw;
+  background: url(../img/796d68e1e80833c5e2e8b54c752bee8926aae2978ae4e51fd01b9047c6d884d1.png)
+    100% no-repeat;
+  background-size: 100% 100%;
+  margin: 0.53vw 0 0 0.8vw;
+}
+
+.group_10 {
+  width: 58.67vw;
+  height: 7.07vw;
+  margin: 3.33vw 0 40.93vw 4vw;
+}
+
+.group_3 {
+  width: 2.67vw;
+  height: 4.27vw;
+  background: url(../img/c55c29d7db7ade66374d1ac618a37b18c30ae42d66c6241ff6c3319bc1c45e68.png)
+    100% no-repeat;
+  background-size: 100% 100%;
+  margin-top: 1.34vw;
+}
+
+.text_8 {
+  width: 25.34vw;
+  height: 7.07vw;
+  color: rgba(255, 255, 255, 1);
+  font-size: 5.06vw;
+  font-family: PingFangSC-Medium;
+  text-align: left;
+  white-space: nowrap;
+  line-height: 7.07vw;
+}
+
+.section_2 {
+  background-color: rgba(216, 216, 216, 1);
+  border-radius: 50%;
+  z-index: 42;
+  height: 26.67vw;
+  width: 26.67vw;
+  position: absolute;
+  left: 36.67vw;
+  top: 40.54vw;
+}
+
+
+
+.section_3 {
+  border-radius: 50%;
+  z-index: 44;
+  position: absolute;
+  left: 35.6vw;
+  top: 39.47vw;
+  width: 28.8vw;
+  height: 28.8vw;
+  border: 1px solid rgba(255, 179, 152, 0.6);
+}
+
+.single-avatar_1 {
+  border-radius: 50%;
+  z-index: 45;
+  position: absolute;
+  left: 34.54vw;
+  top: 38.4vw;
+  width: 30.94vw;
+  height: 30.94vw;
+  border: 1px solid rgba(255, 179, 152, 0.3);
+}

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta charset="utf-8"/>
+    <title>刷脸登陆</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <script th:src="@{|/js/jquery-2.1.4.min.js|}"></script>
+    <style>
+        .web-cam video {
+            width: 39vw;
+            height: 39vw;
+            border-radius: 50%;
+            top: 10vw;
+            left: 20vw;
+            z-index: 5;
+            margin-top: 5vw;
+        }
+        #imgTag {
+            width: 39vw;
+            height: 39vw;
+            border-radius: 50%;
+            top: 10vw;
+            left: 20vw;
+            z-index: 5;
+            margin-top: 45vw;
+        }
+        table {
+            text-align: center;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+<table>
+    <tr id="camTr">
+        <td>
+            <div class="context">
+                <div style="margin-top: 40vw;font-size: 5vw; padding-left: 1vw;">
+                    <span>面向屏幕开始刷脸</span>
+                </div>
+                <div class="web-cam" id="web-cam">
+                    <video id="video" width="500px" height="500px" autoplay="autoplay"></video>
+                    <canvas id="canvas" width="500px" height="500px" style="display: none"></canvas>
+                </div>
+
+                <div>
+                    <span id="countDownTimes" style="font-size: 13vw;">5</span>
+                </div>
+
+            </div>
+        </td>
+    </tr>
+    <tr id="imgTr" style="display: none">
+        <td>
+            <img id="imgTag" th:src="@{|/upload/pic/851bd131a46347b3bb6b13936807bc5a.png|}" alt="..." width="500px" height="500px">
+            <div>
+                <button class="btn btn-sm btn-default" style="font-size: 6vw;margin-top: 6vw;" onclick="refresh()">取消</button>
+            </div>
+        </td>
+    </tr>
+</table>
+<script th:inline="javascript">
+
+    //页面加载完毕执行
+    window.onload=function(){
+        openMedia();//开启摄像头
+        // 倒计时录入人脸
+        let count=5;
+        setInterval(function () {
+            count--;
+            if (count == 0) {//解决重复截图问题
+                takePhoto()
+            }
+            if (count > 0)  {
+                document.getElementById('countDownTimes').innerHTML = count;
+            }
+        },1000);
+
+
+    };
+
+    //开启摄像头
+    function openMedia() {
+        //前置摄像头调用后，摄像功能需要关闭后才能正常执行第二次调用，否则会报错：设备被占用。
+        if (window.stream) {
+            window.stream.getTracks().forEach(track => {
+                track.stop();
+            });
+        }
+        //初始化摄像头：如果移动端则选中前置摄像头，如果web端，选中苹果的FaceTime摄像头，如果都不中则随机抽一个
+        navigator.mediaDevices.enumerateDevices().then(function (deviceInfos) {
+            let num = 0, cameras = [];
+            for (let i = 0; i < deviceInfos.length; ++i) {
+                if (deviceInfos[i].label.includes("FaceTime") || deviceInfos[i].label.includes("front")) {
+                    cameras.push(deviceInfos[i].deviceId)
+                }
+            }
+
+            let constraints = {
+                audio: false,
+                video: {
+                    deviceId: cameras[0],width: 500,height: 500,
+                    permissions: {
+                        "video-capture": {
+                            "description": "Required to capture video using getUserMedia()"
+                        }
+                    }
+                }
+            };
+            //开启摄像头
+            navigator.mediaDevices.getUserMedia(constraints).then((mediaStream) => {
+                //获得video摄像头
+                let video = document.getElementById('video');
+                window.stream = mediaStream;
+                video.srcObject = mediaStream;
+                video.play();
+            }).catch(function (err) {
+                console.log(err.name + ": " + err.message);
+            });
+        });
+    }
+
+    // 上传人脸图像
+    function takePhoto() {
+        //获得Canvas对象
+        let video = document.getElementById('video');
+        let canvas = document.getElementById('canvas');
+        let ctx = canvas.getContext('2d');
+        ctx.drawImage(video, 0, 0, 500, 500);
+        // 获取图片对象地址
+        let imgData = document.getElementById('canvas').toDataURL();
+        // 这里的img就是得到的图片
+        document.getElementById('imgTag').src=imgData;
+        //切换显示摄像头获取的图片
+        document.getElementById("camTr").style.display="none";
+        document.getElementById("imgTr").style.display="block";
+        //上传识别图像
+        setTimeout(function () {
+            //上传
+            $.ajax({
+                url:"/face/faceDetect",
+                type:"POST",
+                data:{"imgData":imgData},
+                success:function(data){
+                    if (data.success){
+                        window.location.href="/face/toApprove?cid="+[[${cid}]]+"&from="+[[${from}]]
+                    } else {
+                        alert("识别失败，请重新识别");
+                        refresh();//刷新
+                    }
+                }
+                ,error:function(){
+                    alert("识别失败，请重新识别");
+                    refresh();//刷新
+                }
+            });
+        },3000);
+    }
+
+    //刷新页面
+    function refresh() {
+        window.location.reload();
+    }
+</script>
+</body>
+</html>

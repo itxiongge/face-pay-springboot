@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script th:src="@{|/js/flexible.js|}"></script>
+    <link rel="stylesheet" type="text/css" th:href="@{|/css/common.css|}" />
+    <link rel="stylesheet" type="text/css" th:href="@{|/css/myclass.response.css|}" />
+    <style th:inline="text">
+      .group_9 {
+        width: 15.2vw;
+        height: 15.2vw;
+        background: url(..[[${user.pic}]])
+        100% no-repeat;
+        background-size: 100% 100%;
+        100% no-repeat;
+        z-index: 45;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page flex-col">
+      <div class="group_1 flex-col"></div>
+      <span class="text_1">
+        Copyright&nbsp;©&nbsp;2022,&nbsp;小英雄，京&nbsp;ICP&nbsp;备&nbsp;16027448号-3
+      </span>
+      <div class="group_2 flex-col">
+        <a href="/course/toSku">
+          <div class="group_7 flex-col"></div>
+        </a>
+        <div class="box_4 flex-row justify-between">
+          <div class="section_1 flex-col">
+            <div class="group_9 flex-col"></div>
+          </div>
+          <div class="text-group_2 flex-col justify-between">
+            <span class="text_4" th:text="${user.nickname}">IT&nbsp;雄哥</span>
+            <span class="paragraph_1">
+              极客时间&nbsp;Java&nbsp;学科讲师
+            </span>
+          </div>
+        </div>
+        <div class="single-avatar_1 flex-col"></div>
+        <div class="group_10 flex-col"></div>
+      </div>
+      <div class="group_11 flex-col">
+        <span class="text_5">我的课程</span>
+        <div class="box_5 flex-row justify-between">
+          <div class="single-avatar_2 flex-col">
+            <div class="image-wrapper_1 flex-col">
+              <img
+                class="image_1"
+                referrerpolicy="no-referrer"
+                src="../img/12da093204dc41f40d2442cc9544c36b526396b2e3a5094c9184a15d7cee6640.png"
+              />
+            </div>
+          </div>
+          <div class="group_14 flex-col">
+            <span class="text_6">高级&nbsp;Java&nbsp;工程师体系课</span>
+            <div class="section_12 flex-row justify-between">
+              <span class="text_7">已解锁全部课程内容</span>
+              <button class="button_1 flex-col">
+                <a th:href="@{|https://u.geekbang.org/lesson/401?article=533360|}">
+                  <span class="text_8">去学习</span>
+                </a>
+              </button>
+            </div>
+            <div class="section_13 flex-row">
+              <div class="box_1 flex-col"></div>
+              <span class="text_9">10/60</span>
+              <span class="text_10">2023/07/08&nbsp;过期</span>
+            </div>
+          </div>
+        </div>
+        <div class="section_5 flex-col"></div>
+        <div class="box_6 flex-row">
+          <div class="single-avatar_3 flex-col">
+            <div class="section_7 flex-col">
+              <div class="section_8 flex-col"></div>
+            </div>
+          </div>
+          <div class="box_7 flex-col">
+            <span class="text_11">Go&nbsp;实战训练营</span>
+            <span class="text_12">已解锁全部课程内容</span>
+            <div class="group_15 flex-row justify-between">
+              <div class="box_2 flex-col"></div>
+              <span class="text_13">4/60</span>
+            </div>
+          </div>
+          <div class="box_8 flex-col justify-between">
+            <button class="button_2 flex-col">
+              <a th:href="@{|https://u.geekbang.org/lesson/401?article=533360|}">
+                <span class="text_14">去学习</span>
+              </a>
+            </button>
+            <span class="text_15">2023/07/08&nbsp;过期</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

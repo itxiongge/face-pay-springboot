@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>高级Java工程师体系课</title>
+    <script th:src="@{|/js/flexible.js|}"></script>
+    <link rel="stylesheet" type="text/css" th:href="@{|/css/common.css|}" />
+    <link rel="stylesheet" type="text/css" th:href="@{|/css/sku.response.css|}" />
+  </head>
+  <body>
+    <div class="page flex-col">
+      <div class="box_7 flex-row"></div>
+      <div class="text-wrapper_2 flex-col">
+        <span class="text_6">
+          Copyright&nbsp;©&nbsp;2022,&nbsp;小英雄，京&nbsp;ICP&nbsp;备&nbsp;16027448号-3
+        </span>
+      </div>
+      <div class="section_5 flex-col">
+        <div class="tag_1 flex-col">
+          <span class="text_7">新课首发，重磅特惠中</span>
+        </div>
+        <div class="box_11 flex-row">
+          <span class="text_8">限时优惠</span>
+          <div class="text-group_8 flex-col justify-between">
+            <span class="text_9">¥8999</span>
+            <span class="text_10">
+              开课后&nbsp;15&nbsp;天内可全额退款&nbsp;支持花呗分期&nbsp;可开发票
+            </span>
+          </div>
+          <span class="text_11">划线价&nbsp;¥10999</span>
+        </div>
+        <div class="image-text_7 flex-row justify-between">
+          <div class="group_21 flex-col"></div>
+          <span class="text-group_7">2022年8月15日&nbsp;开课</span>
+        </div>
+        <div class="box_12 flex-row justify-between">
+          <a th:href="@{|/course/toMyCourse|}">
+            <button class="button_1 flex-col">
+              <span class="text_12">我的课程</span>
+            </button>
+          </a>
+          <a th:href="@{|/face/toFace?cid=java4th&from=sku|}">
+            <button class="button_2 flex-col">
+              <span class="text_13">
+                  刷脸支付
+              </span>
+            </button>
+          </a>
+        </div>
+        <script th:inline="javascript">
+          //提示：是否重复购买商品
+          window.onload=function () {
+            if([[${msg}]]){
+              alert([[${msg}]]);
+              window.location.href="/course/toSku";
+            }
+          }
+        </script>
+      </div>
+    </div>
+  </body>
+</html>

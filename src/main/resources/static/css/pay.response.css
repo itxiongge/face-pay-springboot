@@ -1,0 +1,318 @@
+.page {
+  background-color: rgba(246, 247, 251, 1);
+  position: relative;
+  width: 100vw;
+  height: 216.4vw;
+  overflow: hidden;
+}
+
+.block_1 {
+  z-index: 2;
+  position: relative;
+  width: 100vw;
+  height: 55.74vw;
+  background: url(../img/7210b5513f3ca774838c5c86f7bb60ac3774c51ef018f9d9ec20c18e119b7353.png)
+    100% no-repeat;
+  background-size: 100% 100%;
+}
+
+.box_1 {
+  width: 96.94vw;
+  height: 3.6vw;
+  margin: 0.8vw 0 0 1.86vw;
+}
+
+.box_2 {
+  width: 8.4vw;
+  height: 2.54vw;
+  background: url(../img/5a8314a3ac77b037c7013aaba8fd902efe5609ea3a78fabf232d3126e4af6d13.png)
+    100% no-repeat;
+  background-size: 100% 100%;
+  margin-top: 0.54vw;
+}
+
+.text_1 {
+  width: 12.14vw;
+  height: 3.2vw;
+  color: rgba(3, 3, 3, 1);
+  font-size: 3.2vw;
+  font-family: PingFangSC-Medium;
+  text-align: center;
+  white-space: nowrap;
+  line-height: 3.2vw;
+  margin: 0.26vw 0 0 34vw;
+}
+
+.box_3 {
+  width: 2vw;
+  height: 3.6vw;
+  background: url(../img/64b7827ba67f3ebe3a9d648ad3ab8c49b4fab8d16cf87cf3d190c02b928ac4c0.png)
+    100% no-repeat;
+  background-size: 100% 100%;
+  margin-left: 24.14vw;
+}
+
+.text_2 {
+  width: 8.8vw;
+  height: 3.2vw;
+  color: rgba(3, 3, 3, 1);
+  font-size: 3.2vw;
+  font-family: PingFangSC-Medium;
+  text-align: right;
+  white-space: nowrap;
+  line-height: 3.2vw;
+  margin: 0.26vw 0 0 0.13vw;
+}
+
+.box_4 {
+  width: 6.54vw;
+  height: 2.8vw;
+  background: url(../img/1ada1362e49941100606e48a479f829c114b06dc7b61e662dc06db622cd29f09.png)
+    100% no-repeat;
+  background-size: 100% 100%;
+  margin: 0.53vw 0 0 0.8vw;
+}
+
+.box_5 {
+  width: 100vw;
+  height: 11.74vw;
+  background: url(../img/59bfc798f485046800baca03d50b13a63c67eb4bf0efd133b2be8a62998938de.png)
+    100% no-repeat;
+  background-size: 100% 100%;
+  margin-top: 0.94vw;
+}
+
+.text-group_1 {
+  width: 28.27vw;
+  height: 13.6vw;
+  margin: 3.2vw 0 21.86vw 35.86vw;
+}
+
+.text_3 {
+  width: 25.34vw;
+  height: 7.07vw;
+  color: rgba(64, 64, 64, 1);
+  font-size: 5.06vw;
+  font-family: PingFangSC-Medium;
+  text-align: left;
+  white-space: nowrap;
+  line-height: 7.07vw;
+  margin-left: 1.47vw;
+}
+
+.text_4 {
+  width: 28.27vw;
+  height: 4.4vw;
+  color: rgba(136, 136, 136, 1);
+  font-size: 3.2vw;
+  font-family: PingFangSC-Regular;
+  text-align: right;
+  white-space: nowrap;
+  line-height: 4.4vw;
+  margin-top: 2.14vw;
+}
+
+.box_6 {
+  box-shadow: 0px 4px 30px 0px rgba(105, 135, 157, 0.1);
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 20px;
+  z-index: 37;
+  position: absolute;
+  left: 4vw;
+  top: 39.2vw;
+  width: 92vw;
+  height: 29.34vw;
+  justify-content: flex-center;
+}
+
+.single-avatar_1 {
+  background-color: rgba(216, 216, 216, 1);
+  border-radius: 14px;
+  height: 21.34vw;
+  width: 21.34vw;
+  margin: 4vw 0 0 4vw;
+}
+
+.image-wrapper_1 {
+  height: 21.34vw;
+  background: url(../img/433b377b825f5c0cabf248a0de70376c5eb14ab4e23dc54475025de10cc21d17.png)
+    100% no-repeat;
+  background-size: 100% 100%;
+  width: 21.34vw;
+}
+
+.image_1 {
+  width: 12.8vw;
+  height: 1.6vw;
+  margin-left: 8.54vw;
+}
+
+.block_2 {
+  width: 51.2vw;
+  height: 21.34vw;
+  margin: 4vw 0 0 3.2vw;
+}
+
+.text_5 {
+  width: 49.2vw;
+  height: 6.4vw;
+  color: rgba(64, 64, 64, 1);
+  font-size: 4.53vw;
+  font-family: PingFangSC-Medium;
+  text-align: left;
+  white-space: nowrap;
+  line-height: 6.4vw;
+}
+
+.text_6 {
+  width: 51.2vw;
+  height: 5.34vw;
+  color: rgba(136, 136, 136, 1);
+  font-size: 3.73vw;
+  font-family: PingFangSC-Regular;
+  text-align: left;
+  white-space: nowrap;
+  line-height: 5.34vw;
+  margin-top: 1.07vw;
+}
+
+.text-wrapper_1 {
+  width: 27.87vw;
+  height: 6.4vw;
+  margin-top: 2.14vw;
+}
+
+.text_7 {
+  width: 2.27vw;
+  height: 4.4vw;
+  color: rgba(250, 137, 25, 1);
+  font-size: 3.6vw;
+  font-family: PingFangSC-Semibold;
+  text-align: left;
+  white-space: nowrap;
+  line-height: 4.4vw;
+  margin-top: 1.07vw;
+}
+
+.text_8 {
+  width: 10.94vw;
+  height: 6.4vw;
+  color: rgba(250, 137, 25, 1);
+  font-size: 4.53vw;
+  font-family: PingFangSC-Semibold;
+  text-align: left;
+  white-space: nowrap;
+  line-height: 6.4vw;
+  margin-left: 0.54vw;
+}
+
+.text_9 {
+  width: 10.94vw;
+  height: 4.4vw;
+  color: rgba(136, 136, 136, 1);
+  font-size: 3.2vw;
+  font-family: PingFangSC-Regular;
+  text-align: left;
+  white-space: nowrap;
+  line-height: 4.4vw;
+  margin: 1.06vw 0 0 3.2vw;
+}
+
+.text_10 {
+  width: 4.67vw;
+  height: 4.4vw;
+  color: rgba(136, 136, 136, 1);
+  font-size: 3.73vw;
+  font-family: PingFangSC-Regular;
+  text-align: left;
+  white-space: nowrap;
+  line-height: 4.4vw;
+  margin: 20vw 4vw 0 3.6vw;
+}
+
+.block_3 {
+  box-shadow: 0px 4px 30px 0px rgba(105, 135, 157, 0.1);
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 20px;
+  z-index: 38;
+  position: relative;
+  width: 92vw;
+  height: 59.47vw;
+  margin: 16.8vw 0 0 4vw;
+}
+
+.text-group_2 {
+  width: 57.74vw;
+  height: 12.8vw;
+  margin: 4vw 0 0 4vw;
+}
+
+.text_11 {
+  width: 18.14vw;
+  height: 6.4vw;
+  color: rgba(64, 64, 64, 1);
+  font-size: 4.53vw;
+  font-family: PingFangSC-Medium;
+  text-align: left;
+  white-space: nowrap;
+  line-height: 6.4vw;
+}
+
+.text_12 {
+  width: 57.74vw;
+  height: 5.34vw;
+  color: rgba(136, 136, 136, 1);
+  font-size: 3.73vw;
+  font-family: PingFangSC-Regular;
+  text-align: left;
+  white-space: nowrap;
+  line-height: 5.34vw;
+  margin-top: 1.07vw;
+}
+
+.box_7 {
+  box-shadow: 0px 0px 13px 0px rgba(255, 223, 187, 0.52);
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 11px;
+  height: 29.6vw;
+  width: 29.6vw;
+  margin: 5.2vw 0 7.86vw 31.2vw;
+}
+
+.section_1 {
+  width: 29.6vw;
+  height: 29.6vw;
+  background: url(../img/dc0ad79755626eae45a3705a40683687d15e263c72c924b7f77625632eb28d26.png)
+    100% no-repeat;
+  background-size: 100% 100%;
+}
+
+.box_8 {
+  z-index: 43;
+  position: absolute;
+  left: 30vw;
+  top: 20.8vw;
+  width: 32vw;
+  height: 32vw;
+  background: url(../img/e655577aa5109c3d11edd8cdfe7e5a820747212b888fa4a689af78b4c922462f.png) -0.27vw -0.27vw
+    no-repeat;
+  background-size: 32.53vw 32.53vw;
+}
+
+.text-wrapper_2 {
+  width: 100vw;
+  height: 84.54vw;
+  margin-bottom: 0.14vw;
+}
+
+.text_13 {
+  width: 78vw;
+  height: 4.4vw;
+  color: rgba(136, 136, 136, 1);
+  font-size: 3.2vw;
+  font-family: PingFangSC-Regular;
+  text-align: left;
+  white-space: nowrap;
+  line-height: 4.4vw;
+  margin: 76vw 0 0 11.06vw;
+}

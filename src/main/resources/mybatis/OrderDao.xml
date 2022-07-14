@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itxiong.facepay.dao.OrderDao">
+    <select id="findCoursesByUid" parameterType="string" resultType="com.itxiong.facepay.domain.Course">
+        SELECT * from tab_course where cid in (select cid from tab_order where uid=#{uid});
+    </select>
+
+    <select id="findOrderByCid" resultType="com.itxiong.facepay.domain.Order">
+        select * from tab_order where cid=#{cid} and uid=#{uid} and state='1';
+    </select>
+</mapper>

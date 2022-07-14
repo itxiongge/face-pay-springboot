@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script th:src="@{|/js/flexible.js|}"></script>
+    <script th:src="@{|/js/jquery-2.1.4.min.js|}"></script>
+    <link rel="stylesheet" type="text/css" th:href="@{|/css/common.css|}" />
+    <link rel="stylesheet" type="text/css" th:href="@{|/css/success.response.css|}" />
+  </head>
+  <body>
+    <div class="page flex-col">
+      <div class="group_1 flex-col">
+        <div class="group_2 flex-col">
+
+          <div class="group_4 flex-row justify-between">
+            <div class="box_1 flex-col"></div>
+            <span class="text_3">完成</span>
+          </div>
+          <div class="group_5 flex-row">
+            <div class="group_6 flex-col"></div>
+          </div>
+          <div class="text-wrapper_1 flex-row">
+            <span class="text_4">扣款成功</span>
+          </div>
+          <div class="text-wrapper_1 flex-row">
+            <span id="countDownTimes" class="text_4" style="text-align: center">3</span>
+          </div>
+          <div class="text-wrapper_2 flex-row justify-between">
+            <span class="text_5">¥</span>
+            <span class="text_6" style="text-align: center">8999</span>
+          </div>
+        </div>
+      </div>
+      <script>
+        let count = 3;
+        //1.定时3秒，跳转到我的课程
+        setInterval(function () {
+          count--;
+          if (count < 0) {
+            location.href = "/course/toMyCourse";
+          } else {
+            document.getElementById('countDownTimes').innerHTML = count;
+          }
+        },1000);
+      </script>
+      <div class="group_7 flex-col">
+        <span class="text_7">
+          Copyright&nbsp;©&nbsp;2022,&nbsp;小英雄，京&nbsp;ICP&nbsp;备&nbsp;16027448号-3
+        </span>
+        <div class="box_2 flex-col">
+          <div class="block_4 flex-row">
+            <div class="single-avatar_1 flex-col">
+              <div class="image-wrapper_1 flex-col">
+                <img
+                  class="image_1"
+                  referrerpolicy="no-referrer"
+                  src="../img/12da093204dc41f40d2442cc9544c36b526396b2e3a5094c9184a15d7cee6640.png"
+                />
+              </div>
+            </div>
+            <div class="section_1 flex-col">
+              <span class="text_8">高级&nbsp;Java&nbsp;工程师体系课</span>
+              <span class="text_9">最近开营：第0期·8月15日开课</span>
+              <div class="text-wrapper_3 flex-row">
+                <span class="text_10">¥</span>
+                <span class="text_11">8999</span>
+                <span class="text_12">¥10999</span>
+              </div>
+            </div>
+            <span class="text_13">x&nbsp;1</span>
+          </div>
+          <div class="block_5 flex-col"></div>
+          <div class="text-wrapper_4 flex-row">
+            <span class="text_14">订单金额</span>
+            <span class="text_15">&nbsp;¥</span>
+            <span class="text_16">&nbsp;8999</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

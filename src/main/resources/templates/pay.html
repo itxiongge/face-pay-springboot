@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script th:src="@{|/js/flexible.js|}"></script>
+    <script th:src="@{|/js/jquery-2.1.4.min.js|}" ></script>
+    <script th:src="@{|/js/qrcode.js|}" ></script>
+    <link rel="stylesheet" type="text/css" th:href="@{|/css/common.css|}" />
+    <link rel="stylesheet" type="text/css" th:href="@{|/css/pay.response.css|}" />
+  </head>
+  <body>
+    <div class="page flex-col">
+      <div class="block_1 flex-col">
+
+        <div class="box_5 flex-col"></div>
+        <div class="text-group_1 flex-col justify-between">
+          <span class="text_3">支付未完成</span>
+          <span class="text_4">剩余时间：9分48秒</span>
+        </div>
+        <div class="box_6 flex-row">
+          <div class="single-avatar_1 flex-col">
+            <div class="image-wrapper_1 flex-col">
+              <img  class="image_1" referrerpolicy="no-referrer" src="../img/12da093204dc41f40d2442cc9544c36b526396b2e3a5094c9184a15d7cee6640.png"
+              />
+            </div>
+          </div>
+          <div class="block_2 flex-col">
+            <span class="text_5" th:text="${course.courseName}">高级&nbsp;Java&nbsp;工程师体系课</span>
+            <span class="text_6" >最近开营：第0期·<span th:text="${#dates.format(course.startTime,'yyyy年MM月dd')}"></span>开课</span>
+            <div class="text-wrapper_1 flex-row">
+              <span class="text_7">¥</span>
+              <span class="text_8" th:text="${course.price}">8999</span>
+            </div>
+          </div>
+          <span class="text_10">x&nbsp;1</span>
+        </div>
+      </div>
+      <div class="block_3 flex-col">
+        <div class="text-group_2 flex-col justify-between">
+          <span class="text_11">订单号：<span class="text_12" th:text="${order.oid}">50367448-65c2-4add-af27-cf3</span></span>
+        </div>
+        <div class="box_7 flex-col">
+          <div id="qrCode" class="section_1 flex-col"></div>
+        </div>
+        <script th:inline="javascript">
+          <!-- 注意事项:请求地址是字符串，必须被双引号或者单引号包裹 -->
+          new QRCode(document.getElementById("qrCode"),[[${pay_url}]])
+        </script>
+        <div class="box_8 flex-col"></div>
+      </div>
+      <div class="text-wrapper_2 flex-col">
+        <span class="text_13">
+          Copyright&nbsp;©&nbsp;2022,&nbsp;小英雄，京&nbsp;ICP&nbsp;备&nbsp;16027448号-3
+        </span>
+      </div>
+    </div>
+    <script th:inline="javascript">
+        //1.间隔5秒发送请求，查询订单支付状态
+        setInterval(function () {
+          //1.1 定义请求地址和参数
+          let url = "/order/findPayStatus";
+          let data = "oid=" + [[${order.oid}]];
+          //1.2 使用ajax发送请求，查询结果
+          $.post(url, data, function (response) {
+            if (response.success) {//success值为true
+              //订单已经支付，跳转到支付成功的页面
+              location.href = "/pay/toSuccess";
+            }
+            //订单未支付，啥也不做
+          });
+
+        },5*1000);
+        //2.如果时隔20【60秒】分钟，用户还未支付，跳转到支付失败地址！
+        setTimeout(function () {
+          location.href = "/pay/toFail";
+        }, 5 * 60 * 1000);
+    </script>
+  </body>
+</html>

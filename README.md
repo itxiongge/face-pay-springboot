@@ -513,14 +513,3 @@ public ResultInfo faceLogin(String oid) {
 
 > 源码请看项目：face-pay-springboot
 
-
-
-
-
-# Who I am?
-
-IT雄哥、Java布道师、全占开发工程师
-
-# Contact me
-
-<img src="README/image-20220714130709816.png" alt="image-20220714130709816" style="max-width: 30%;" />                                                                 <img src="README/image-20220714130921650.png" alt="image-20220714130921650" style="max-width: 30%;" />
